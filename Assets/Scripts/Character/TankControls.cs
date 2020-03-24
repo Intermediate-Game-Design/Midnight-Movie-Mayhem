@@ -12,7 +12,7 @@ public class TankControls : MonoBehaviour
     public bool isRunning;
     public bool backwardsCheck = false;
     public bool inputEnabled = true;
-    
+    public bool canSprint = true;
 
 
 
@@ -21,7 +21,7 @@ public class TankControls : MonoBehaviour
     {
         if (inputEnabled)
         {
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift) && canSprint)
             {
                 isRunning = true;
             }
